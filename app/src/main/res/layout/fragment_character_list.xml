@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".fragment.ListaPersonagensFragment">
+    tools:context=".fragment.CharacterListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_lista_personagens"
+        android:id="@+id/recyclerCharacterList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -16,5 +16,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        tools:listitem="@layout/item_personagens"/>
+        tools:listitem="@layout/item_character"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

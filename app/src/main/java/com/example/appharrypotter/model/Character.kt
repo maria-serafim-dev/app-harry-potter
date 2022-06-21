@@ -1,10 +1,10 @@
 package com.example.appharrypotter.model
 
-data class Personagem(
+data class Character(
     val actor: String,
     val alive: Boolean,
-    val alternate_actors: List<Any>,
-    val alternate_names: List<Any>,
+    val alternate_actors: List<String>,
+    val alternate_names: List<String>,
     val ancestry: String,
     val dateOfBirth: String,
     val eyeColour: String,
