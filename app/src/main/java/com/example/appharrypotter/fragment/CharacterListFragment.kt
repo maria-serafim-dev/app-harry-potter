@@ -37,12 +37,12 @@ class CharacterListFragment : Fragment() {
     private fun observeChanges() {
         viewModel.characterList.observe(viewLifecycleOwner) {
             adapter.submitList(it)
+            stopShimmer()
         }
     }
 
     private fun setAdapter() {
         binding.recyclerCharacterList.adapter = adapter
-        stopShimmer()
     }
 
     private fun stopShimmer() {
