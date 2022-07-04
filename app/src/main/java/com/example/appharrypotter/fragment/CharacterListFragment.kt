@@ -29,6 +29,7 @@ class CharacterListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        startShimmer()
         observeChanges()
         setAdapter()
     }
@@ -36,10 +37,20 @@ class CharacterListFragment : Fragment() {
     private fun observeChanges() {
         viewModel.characterList.observe(viewLifecycleOwner) {
             adapter.submitList(it)
+            stopShimmer()
         }
     }
 
     private fun setAdapter() {
         binding.recyclerCharacterList.adapter = adapter
+    }
+
+    private fun stopShimmer() {
+        binding.shimmerViewContainer.stopShimmer()
+        binding.shimmerViewContainer.visibility = View.GONE
+    }
+
+    private fun startShimmer() {
+        binding.shimmerViewContainer.startShimmer()
     }
 }
