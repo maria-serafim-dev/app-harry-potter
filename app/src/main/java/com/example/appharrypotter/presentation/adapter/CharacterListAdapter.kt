@@ -1,4 +1,4 @@
-package com.example.appharrypotter.adapter
+package com.example.appharrypotter.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appharrypotter.databinding.ItemCharacterBinding
-import com.example.appharrypotter.extensions.loadImage
-import com.example.appharrypotter.model.Character
+import com.example.appharrypotter.core.extensions.loadImage
+import com.example.appharrypotter.data.model.Character
 
 class CharacterListAdapter :
     ListAdapter<Character, CharacterListAdapter.CharacterListViewHolder>(CharacterCallback()) {

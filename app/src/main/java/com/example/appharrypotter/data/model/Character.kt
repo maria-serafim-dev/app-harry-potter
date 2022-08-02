@@ -1,4 +1,4 @@
-package com.example.appharrypotter.model
+package com.example.appharrypotter.data.model
 
 data class Character(
     val actor: String,

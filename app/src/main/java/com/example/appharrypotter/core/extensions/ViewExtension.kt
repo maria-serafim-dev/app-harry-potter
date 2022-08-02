@@ -1,4 +1,4 @@
-package com.example.appharrypotter.extensions
+package com.example.appharrypotter.core.extensions
 
 import android.widget.ImageView
 import com.bumptech.glide.Glide

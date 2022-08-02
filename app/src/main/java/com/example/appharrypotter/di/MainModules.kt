@@ -1,8 +1,8 @@
 package com.example.appharrypotter.di
 
-import com.example.appharrypotter.adapter.CharacterListAdapter
-import com.example.appharrypotter.repository.CharacterRepository
-import com.example.appharrypotter.viewModel.CharacterViewModel
+import com.example.appharrypotter.presentation.adapter.CharacterListAdapter
+import com.example.appharrypotter.data.repository.CharacterRepository
+import com.example.appharrypotter.presentation.viewModel.CharacterViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

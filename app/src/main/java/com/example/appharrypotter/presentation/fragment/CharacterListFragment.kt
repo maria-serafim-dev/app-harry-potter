@@ -1,13 +1,13 @@
-package com.example.appharrypotter.fragment
+package com.example.appharrypotter.presentation.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.appharrypotter.adapter.CharacterListAdapter
+import com.example.appharrypotter.presentation.adapter.CharacterListAdapter
 import com.example.appharrypotter.databinding.FragmentCharacterListBinding
-import com.example.appharrypotter.viewModel.CharacterViewModel
+import com.example.appharrypotter.presentation.viewModel.CharacterViewModel
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
