@@ -57,4 +57,8 @@ dependencies {
 
     implementation Glide.core
     implementation Shimmer.core
+
+    implementation Koin.core
+    testImplementation Koin.test
+    testImplementation Koin.junit
 }

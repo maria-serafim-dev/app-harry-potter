@@ -5,18 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import com.example.appharrypotter.adapter.CharacterListAdapter
 import com.example.appharrypotter.databinding.FragmentCharacterListBinding
 import com.example.appharrypotter.viewModel.CharacterViewModel
+import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CharacterListFragment : Fragment() {
 
-    private lateinit var binding : FragmentCharacterListBinding
-    private val viewModel : CharacterViewModel by viewModels()
-    private val adapter : CharacterListAdapter by lazy {
-        CharacterListAdapter()
-    }
+    private lateinit var binding: FragmentCharacterListBinding
+    private val viewModel: CharacterViewModel by viewModel()
+    private val adapter: CharacterListAdapter by inject()
 
     override fun onCreateView(
         inflater: LayoutInflater,
