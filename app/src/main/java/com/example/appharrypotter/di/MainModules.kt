@@ -9,7 +9,7 @@ import org.koin.dsl.module
 
 val mainModules = module {
     single {
-        CharacterRepository(remoteDataSource = get())
+        CharacterRepository(remoteDataSource = get<CharacterRemoteDataSourceImpl>())
     }
     viewModel {
         CharacterViewModel(repository = get())
