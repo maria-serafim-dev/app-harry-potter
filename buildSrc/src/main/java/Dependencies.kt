@@ -74,3 +74,14 @@ object Shimmer {
 
     const val core = "com.facebook.shimmer:shimmer:${Versions.shimmer}"
 }
+
+object Koin {
+    object Versions {
+        const val koin = "3.2.0"
+    }
+
+    const val core = "io.insert-koin:koin-android:${Versions.koin}"
+    const val test = "io.insert-koin:koin-test:${Versions.koin}"
+    const val junit = "io.insert-koin:koin-test-junit4:${Versions.koin}"
+
+}
