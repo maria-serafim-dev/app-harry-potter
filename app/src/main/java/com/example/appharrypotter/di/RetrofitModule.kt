@@ -1,7 +1,7 @@
 package com.example.appharrypotter.di
 
 
-import com.example.appharrypotter.network.HarryPotterApiService
+import com.example.appharrypotter.data.network.HarryPotterApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module

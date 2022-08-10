@@ -1,6 +1,6 @@
-package com.example.appharrypotter.network
+package com.example.appharrypotter.data.network
 
-import com.example.appharrypotter.model.Character
+import com.example.appharrypotter.data.model.Character
 import retrofit2.http.GET
 
 interface HarryPotterApiService {
