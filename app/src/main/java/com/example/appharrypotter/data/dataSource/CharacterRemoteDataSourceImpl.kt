@@ -13,7 +13,11 @@ class CharacterRemoteDataSourceImpl(
 
     override suspend fun getListCharacters(): Result<List<Character>> {
         return if (checkConnection(context)) {
-            Result.Success(service.getListCharacters())
+            try{
+                Result.Success(service.getListCharacters())
+            }catch(e: Exception){
+                Result.Error("Não foi possível carregar os dados.")
+            }
         } else {
             Result.Error("Não foi possível carregar os dados, verifique a conexão com a internet")
         }
