@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.appharrypotter.presentation.adapter.CharacterListAdapter
 import com.example.appharrypotter.databinding.FragmentCharacterListBinding
@@ -34,9 +35,15 @@ class CharacterListFragment : Fragment() {
     }
 
     private fun observeChanges() {
-        viewModel.characterList.observe(viewLifecycleOwner) {
-            adapter.submitList(it)
+        viewModel.characterList.observe(viewLifecycleOwner) { characterList ->
+            adapter.submitList(characterList)
             stopShimmer()
+        }
+
+        viewModel.messageError.observe(viewLifecycleOwner){ message ->
+            stopShimmer()
+            Toast.makeText(context, message, Toast.LENGTH_LONG)
+                .show()
         }
     }
 
