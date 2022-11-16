@@ -3,7 +3,7 @@ package com.example.appharrypotter.data.dataSource
 import android.content.Context
 import com.example.appharrypotter.core.Result
 import com.example.appharrypotter.core.util.checkConnection
-import com.example.appharrypotter.data.model.Character
+import com.example.appharrypotter.data.model.CharacterResponse
 import com.example.appharrypotter.data.network.HarryPotterApiService
 
 class CharacterRemoteDataSourceImpl(
@@ -11,7 +11,7 @@ class CharacterRemoteDataSourceImpl(
     private val context: Context
 ) : CharacterRemoteDataSource {
 
-    override suspend fun getListCharacters(): Result<List<Character>> {
+    override suspend fun getListCharacters(): Result<List<CharacterResponse>> {
         return if (checkConnection(context)) {
             try{
                 Result.Success(service.getListCharacters())

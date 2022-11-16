@@ -7,14 +7,14 @@ import androidx.lifecycle.viewModelScope
 import com.example.appharrypotter.core.Result.Error
 import com.example.appharrypotter.core.Result.Success
 import com.example.appharrypotter.core.State
-import com.example.appharrypotter.data.model.Character
+import com.example.appharrypotter.domain.model.CharacterDomain
 import com.example.appharrypotter.domain.useCase.CharacterListUseCase
 import kotlinx.coroutines.launch
 
 class CharacterViewModel(private val characterListUseCase : CharacterListUseCase): ViewModel() {
 
-    private val _characterList = MutableLiveData<List<Character>>()
-    val characterList: LiveData<List<Character>> get() = _characterList
+    private val _characterList = MutableLiveData<List<CharacterDomain>>()
+    val characterList: LiveData<List<CharacterDomain>> get() = _characterList
 
     private var _messageError = MutableLiveData<String>()
     val messageError: LiveData<String> = _messageError
