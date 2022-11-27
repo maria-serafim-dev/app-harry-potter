@@ -1,6 +1,7 @@
 plugins {
     id ("com.android.application")
     id ("org.jetbrains.kotlin.android")
+    id 'kotlin-kapt'
 }
 
 android {
@@ -61,4 +62,8 @@ dependencies {
     implementation Koin.core
     testImplementation Koin.test
     testImplementation Koin.junit
+
+    implementation Room.core
+    kapt Room.compiler
+    implementation Room.runtime
 }

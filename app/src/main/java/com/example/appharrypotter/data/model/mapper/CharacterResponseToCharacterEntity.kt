@@ -1,11 +1,11 @@
 package com.example.appharrypotter.data.model.mapper
 
-import com.example.appharrypotter.data.model.CharacterResponse
 import com.example.appharrypotter.data.model.WandResponse
-import com.example.appharrypotter.domain.model.CharacterDomain
-import com.example.appharrypotter.domain.model.WandDomain
+import com.example.appharrypotter.data.model.CharacterResponse
+import com.example.appharrypotter.data.model.database.CharacterEntity
+import com.example.appharrypotter.data.model.database.WandEntity
 
-fun CharacterResponse.toCharacterDomain() = CharacterDomain(
+fun CharacterResponse.toCharacterEntity() = CharacterEntity(
     actor  = actor,
     alive = alive,
     alternate_actors = alternate_actors,
@@ -22,11 +22,9 @@ fun CharacterResponse.toCharacterDomain() = CharacterDomain(
     name = name,
     patronus = patronus,
     species = species,
-    wand = wand?.toWandDomain() ?: wandDomainEmpty(),
+    wand = wand?.toWandEntity(),
     wizard = wizard,
     yearOfBirth = yearOfBirth
 )
 
-fun WandResponse.toWandDomain() = WandDomain(core = core, length = length, wood = wood )
-
-fun wandDomainEmpty() = WandDomain(core = "", length = "", wood = "")
+fun WandResponse.toWandEntity() = WandEntity(core = core, length = length, wood = wood )

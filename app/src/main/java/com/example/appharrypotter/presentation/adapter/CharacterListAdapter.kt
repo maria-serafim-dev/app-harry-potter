@@ -31,7 +31,7 @@ class CharacterListAdapter :
 
         fun onBind(character: CharacterDomain) {
             with(binding) {
-                tvHome.text = character.wand.core
+                tvHome.text = character.house
                 tvName.text = character.name
                 imgCharacter.loadImage(character.image)
             }

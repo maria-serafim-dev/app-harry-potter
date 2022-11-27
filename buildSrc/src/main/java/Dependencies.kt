@@ -85,3 +85,13 @@ object Koin {
     const val junit = "io.insert-koin:koin-test-junit4:${Versions.koin}"
 
 }
+
+object Room {
+    object Versions {
+        const val core = "2.4.3"
+    }
+
+    const val core = "androidx.room:room-ktx:${Versions.core}"
+    const val runtime = "androidx.room:room-runtime:${Versions.core}"
+    const val compiler = "androidx.room:room-compiler:${Versions.core}"
+}
