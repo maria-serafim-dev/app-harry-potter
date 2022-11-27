@@ -19,7 +19,7 @@ val mainModules = module {
         CharacterListAdapter()
     }
     single{
-        CharacterRemoteDataSourceImpl(service = get())
+        CharacterRemoteDataSourceImpl(service = get(), get())
     }
     single {
         CharacterListUseCaseImpl(repository = get<CharacterRepositoryImpl>())

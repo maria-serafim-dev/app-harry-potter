@@ -7,10 +7,10 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appharrypotter.databinding.ItemCharacterBinding
 import com.example.appharrypotter.core.extensions.loadImage
-import com.example.appharrypotter.data.model.Character
+import com.example.appharrypotter.domain.model.CharacterDomain
 
 class CharacterListAdapter :
-    ListAdapter<Character, CharacterListAdapter.CharacterListViewHolder>(CharacterCallback()) {
+    ListAdapter<CharacterDomain, CharacterListAdapter.CharacterListViewHolder>(CharacterCallback()) {
 
     private lateinit var binding: ItemCharacterBinding
 
@@ -29,9 +29,9 @@ class CharacterListAdapter :
     inner class CharacterListViewHolder(private val binding: ItemCharacterBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun onBind(character: Character) {
+        fun onBind(character: CharacterDomain) {
             with(binding) {
-                tvHome.text = character.house
+                tvHome.text = character.wand.core
                 tvName.text = character.name
                 imgCharacter.loadImage(character.image)
             }
@@ -39,12 +39,12 @@ class CharacterListAdapter :
     }
 }
 
-class CharacterCallback : DiffUtil.ItemCallback<Character>() {
-    override fun areItemsTheSame(oldItem: Character, newItem: Character): Boolean {
+class CharacterCallback : DiffUtil.ItemCallback<CharacterDomain>() {
+    override fun areItemsTheSame(oldItem: CharacterDomain, newItem: CharacterDomain): Boolean {
         return oldItem.name == newItem.name
     }
 
-    override fun areContentsTheSame(oldItem: Character, newItem: Character): Boolean {
+    override fun areContentsTheSame(oldItem: CharacterDomain, newItem: CharacterDomain): Boolean {
         return oldItem == newItem
     }
 

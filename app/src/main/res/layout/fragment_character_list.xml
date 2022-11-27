@@ -28,7 +28,6 @@
 
     </com.facebook.shimmer.ShimmerFrameLayout>
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerCharacterList"
         android:layout_width="match_parent"
@@ -40,4 +39,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         tools:listitem="@layout/item_character"/>
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="@dimen/img_logo_width"
+        android:layout_height="@dimen/img_logo_height"
+        android:src="@drawable/harry_potter_logo"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_message_list_empty"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo"
+        app:layout_constraintVertical_bias="0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

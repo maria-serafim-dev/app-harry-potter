@@ -1,6 +1,6 @@
 package com.example.appharrypotter.data.model
 
-data class Character(
+data class CharacterResponse(
     val actor: String,
     val alive: Boolean,
     val alternate_actors: List<String>,
@@ -17,7 +17,7 @@ data class Character(
     val name: String,
     val patronus: String,
     val species: String,
-    val wand: Wand,
+    val wand: WandResponse?,
     val wizard: Boolean,
     val yearOfBirth: String
 )

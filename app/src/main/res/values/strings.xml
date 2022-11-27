@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AppHarryPotter</string>
+    <string name="text_message_list_empty">Não há personagens para listar no momento.\nTente novamente mais tarde.</string>
 </resources>
